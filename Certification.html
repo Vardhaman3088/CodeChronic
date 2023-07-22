@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Chronic-Certification</title>
+    <link rel="icon" href="logo1.svg" type="image/x-icon">
+    <link rel="stylesheet" href="vstyle.css">
+</head>
+<body>
+    <header>
+        <div class="navContainer">
+            <header>
+                <nav class="navigationBar">
+                    <img src="logozoom.svg" alt="logo" class="logo">
+                    <ul class="menu">
+                        <li class="navelement"> <a href="homePage.html" class="links">Home</a></li>
+                        <li class="navelement"> <a href="problemPage.html" class="links">Problems</a></li>
+                        <li class="navelement"> <a href="preparation.html" class="links">Preparation</a></li>
+                        <li class="navelement"> <a href="Certification.html" class="links">Certificate</a></li>
+                        <li class="navelement"> <a href="#" class="links">Contest</a></li>
+                        <li class="navelement"> <a href="about.html" class="links">About</a></li>
+                    </ul>
+                </nav>
+            </header>
+     </div>
+    </header>
+    <div class="certification-timer">
+        <h1 id="launching">WE ARE <span>LAUNCHING</span> WITHIN</h1>
+        <p id="countdown" ></p>
+        <h1 id="certPrac">Till then  <button class="bounce" 
+            onclick="window.location.href = 'problemPage.html';">
+                PRACTICE HERE
+            </button></h1>
+    </div>
+    <script>
+        var countDownDate=new Date("Dec 15,2022 00:00:00").getTime();
+        var countdownfunction=setInterval(function(){
+            var now=new Date().getTime();
+            var distance=countDownDate-now;
+            var days=Math.floor(distance/(1000*60*60*24));
+            var hours=Math.floor((distance %(1000 * 60 * 60 * 24))/(1000*60*60));
+            var minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+            var seconds=Math.floor((distance %(1000*60))/1000);
+
+            document.getElementById("countdown").innerHTML=days+"D: "+hours+"H: "+minutes+"M: "+seconds+"S";
+           if(distance<0){
+            clearInterval(countdownfunction);
+            document.getElementById("coutdown").innerHTML="Expired";
+           } 
+        },1000);
+    </script>
+    
+
+</body>
+</html>

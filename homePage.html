@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Cronic - Home</title>
+    <link rel="icon" href="logo1.svg" type="image/x-icon">
+    <link rel="stylesheet" href="homePageCss.css">
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <div class="navContainer" >
+        <header>
+            <nav class="navigationBar">
+                <img src="logozoom.svg" alt="logo" class="logo">
+                <ul class="menu">
+                    <li class="navelement"> <a href="homePage.html" class="links">Home</a></li>
+                    <li class="navelement"> <a href="problemPage.html" class="links">Problems</a></li>
+                    <li class="navelement"> <a href="preparation.html" class="links">Preparation</a></li>
+                    <li class="navelement"> <a href="Certification.html" class="links">Certificate</a></li>
+                    <li class="navelement"> <a href="ArraySum.html" class="links">Contest</a></li>
+                    <li class="navelement"> <a href="about.html" class="links">About</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    
+    <div class="slideShowContainer">
+        <div class="mySlides fade" id="slide-1">
+            <h2 id="heading">Thought of the Day</h2>
+            <img src="sliderImg/first.jpg" class="Images">
+            <div class="text">
+                "Any fool can write code that a computer can understand. Good programmers write code that humans can
+                understand"
+            </div>
+            <div class="author">
+                - By Martin Fowler
+            </div>
+        </div>
+        <div class="mySlides fade">
+            <h2 id="dailyChallenge"> Problem of the Day : Array Sum</h2>
+            <p id="problemDesc">
+                Given an array of integer , you need to return the sum of array.
+            </p>
+            <button id="solveButton">Click here to Solve</button>
+            <img src="sliderImg/fourth.jpg" class="Images">
+        </div>
+        <div class="mySlides fade">
+            <h2 class="contestInfo">Montly Contest - November 2022</h2>
+            <p id="description">Join the Contest , test your skill and practice for placement.Top 10 winner will get
+                exciting prizes. </p>
+            <button id="joinButton">Click here join Contest.</button>
+            <img src="sliderImg/fifth.jpg" class="Images">
+        </div>
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+    <div class="s-Box-container">
+        <div class="s-Box">
+            <div class="bar"></div>
+            <h1>Problems</h1>
+            <p>Practice Makes Perfect</p>
+            <a class="btn" href="problemPage.html">Check</a>
+        </div>
+        <div class="s-Box">
+            <div class="bar"></div>
+            <h1>Preparation</h1>
+            <p>Prepare yourself</p>
+            <a class="btn" href="preparation.html">Check</a>
+        </div>
+        <div class="s-Box">
+            <div class="bar"></div>
+            <h1>Problem of the day</h1>
+            <p>Be consistent</p>
+            <a class="btn" href="ArraySum.html">Check</a>
+        </div>
+        <div class="s-Box">
+            <div class="bar"></div>
+            <h1>Certification</h1>
+            <p>Become the Certified Programmer</p>
+            <a class="btn" href="Certification.html">Check</a>
+        </div>
+    </div>
+    <div class="flexBanaDe">
+        <div class="landImgText">
+            Ace your programming skill with code<font color="yellow">chronic</font>  !
+            <p>Become the programmer</p>
+
+        <div id="Sptbtn">
+            <a id="mybtn" href="preparation.html">Prepare Here</a>
+        </div>
+        </div>
+        <div class="landImg">
+            <img src="programmer_Image4.svg">
+            <!-- <img src="programmer_Image2.jpg">
+                <img src="programmer_Image3.jpg"> -->
+            </div>
+        </div>
+        <footer>
+           Copyright &copy; CodeChronic team
+        </footer>
+    <script>
+        let slideIndex = 0;
+        showSlideShow();
+        function showSlideShow() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlideShow, 2000);
+
+        }
+    </script>
+
+</html>

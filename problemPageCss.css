@@ -1,0 +1,121 @@
+body {
+    background-color: rgb(255, 255, 255);
+    /* height: 3638px; */
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+.navContainer {
+    /* position: sticky; */
+    top: 0;
+    left: 0;
+    max-width: 100%;
+}
+
+.navigationBar {
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(197, 228, 42);
+    /* flex-wrap: wrap; */
+    padding: 3px 4px;
+    margin: 0px;
+    /* z-index: 200; */
+    margin-bottom: 80px;
+}
+
+.logo {
+    /* border: 3px solid yellow; */
+    max-width: 10%;
+}
+
+.navelement {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.links {
+    text-decoration: none;
+    color: rgb(3, 3, 3);
+    padding: 10px 20px;
+    font-size: 21px;
+}
+
+.links:hover {
+    /* background-color: white;  */
+    background-color: rgb(227, 227, 227);
+    color: brown;
+}
+
+#tableSheet {
+    border-collapse: collapse;
+    width: 70vw;
+    /* border: 2px solid red; */
+    /* margin: 70px auto; */
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.problemLinks{
+    text-decoration: none;
+    color: black;
+}
+#tableSheet tr,
+#tableSheet td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    /* padding: 0.8rem; */
+}
+
+#tableSheet tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#tableSheet tr:hover {
+    background-color: #ddd;
+}
+#tableSheet th {
+    padding: 15px 0px;
+    background-color: #3b6f76;
+    color: white;
+}
+#tableSheet td[class = "easy"]{
+    color: #00B8A3;
+}
+#tableSheet td[class = "medium"]{
+    color: #FFC01E;
+}
+#tableSheet td[class = "hard"]{
+    color: #FF375F;
+}
+button{
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    border-radius: 7px;
+}
+.buttonContainer{
+    /* border: 3px solid violet; */
+    margin: 20px 0px;
+}
+#previousButton{
+    position: relative;
+    left: 250px;
+}
+
+#nextButton{
+    position: absolute;
+    right: 250px;
+}
+button:hover{
+    color: #FF375F;
+    background-color: #f2f2f2;
+}
